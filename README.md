@@ -24,11 +24,11 @@
 
 ### Production
 
-🌐 https://cloudsynclive.vercel.app
+🌐 https://cloudsyncweather.vercel.app
 
 or
 
-🌐 https://cloudsynclive.netlify.app
+🌐 https://cloudsyncweather.netlify.app
 
 ---
 
