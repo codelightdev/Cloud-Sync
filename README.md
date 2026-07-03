@@ -28,7 +28,7 @@
 
 or
 
-🌐 https://cloudsync.netlify.app
+🌐 https://cloudsynclive.netlify.app
 
 ---
 
