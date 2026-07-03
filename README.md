@@ -1,7 +1,7 @@
 # ☁️ CloudSync
 
 <p align="center">
-  <img src="./src/assets/img/Logo/Logo_Icon.png" alt="CloudSync Logo" width="160"/>
+  <img src="./src/assets/img/Logo/Logo.png" alt="CloudSync Logo" width="160"/>
 </p>
 
 <p align="center">
@@ -317,7 +317,7 @@ Weather UI     Error UI
 Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/cloudsync.git
+git clone https://github.com/codelightdev/Cloud-Sync.git
 ```
 
 Navigate into the project
@@ -540,15 +540,15 @@ Creator of **CloudSync**
 
 Portfolio
 
-🌐 https://yjdpr.com.ng
+🌐 http://codelightportfolio2024.netlify.app/
 
 GitHub
 
-https://github.com/your-github-username
+https://github.com/codelightdev
 
 LinkedIn
 
-https://linkedin.com/in/your-linkedin
+https://www.linkedin.com/in/iwejuohenryebuka/
 
 ---
 
