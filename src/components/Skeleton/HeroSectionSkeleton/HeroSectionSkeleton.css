@@ -1,0 +1,436 @@
+/* ===========================
+   HERO SKELETON
+=========================== */
+
+.hero-skeleton{
+
+    position:relative;
+
+    width:100%;
+
+    height:450px;
+
+    overflow:hidden;
+
+    border-radius:12px;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.35),
+        rgba(0,0,0,.35)
+    ),
+    linear-gradient(
+        135deg,
+        #18202d,
+        #1d2c42,
+        #162436
+    );
+
+    background-size:cover;
+
+}
+
+/* ===========================
+   Floating Background Glow
+=========================== */
+
+.hero-skeleton::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+    height:350px;
+
+    border-radius:50%;
+
+    top:-120px;
+    right:-80px;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        rgba(56,189,248,.25),
+
+        transparent 70%
+
+    );
+
+    animation:floatGlow 7s ease-in-out infinite;
+
+}
+
+.hero-skeleton::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+    height:280px;
+
+    border-radius:50%;
+
+    bottom:-100px;
+    left:-60px;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        rgba(34,211,238,.18),
+
+        transparent 70%
+
+    );
+
+    animation:floatGlowReverse 8s ease-in-out infinite;
+
+}
+
+/* ===========================
+   Layout
+=========================== */
+
+.hero-skeleton .weather{
+
+    width:100%;
+    height:100%;
+
+    position:relative;
+
+    padding:40px 30px;
+
+}
+
+.hero-skeleton .weather-box{
+
+    position:absolute;
+
+    bottom:20%;
+
+    left:30px;
+
+}
+
+/* ===========================
+   Weather Orb
+=========================== */
+
+.sk-weather-icon{
+
+    width:100px;
+    height:100px;
+
+    border-radius:50%;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(56,189,248,.22),
+
+        rgba(255,255,255,.05)
+
+    );
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+
+        inset 0 1px 2px rgba(255,255,255,.1),
+
+        0 0 30px rgba(56,189,248,.25);
+
+    animation:
+
+        pulse 2.5s ease infinite,
+        float 5s ease-in-out infinite;
+
+}
+
+/* ===========================
+   Info
+=========================== */
+
+.hero-skeleton .w-info{
+
+    margin-top:25px;
+
+}
+
+.sk-temp{
+
+    width:220px;
+    height:62px;
+
+    border-radius:12px;
+
+}
+
+.sk-location{
+
+    width:180px;
+    height:24px;
+
+    margin-top:20px;
+
+    border-radius:8px;
+
+}
+
+.sk-row{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:24px;
+
+}
+
+.sk-pill{
+
+    width:120px;
+    height:18px;
+
+    border-radius:30px;
+
+}
+
+/* ===========================
+   Shimmer
+=========================== */
+
+.shimmer{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+    rgba(255,255,255,.07);
+
+}
+
+.shimmer::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    transform:translateX(-100%);
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.15),
+
+        transparent
+
+    );
+
+    animation:shimmer 1.6s infinite;
+
+}
+
+/* ===========================
+   Animations
+=========================== */
+
+@keyframes shimmer{
+
+    100%{
+
+        transform:translateX(100%);
+
+    }
+
+}
+
+@keyframes pulse{
+
+    50%{
+
+        transform:scale(1.04);
+
+        box-shadow:
+
+        0 0 45px rgba(56,189,248,.4);
+
+    }
+
+}
+
+@keyframes float{
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+}
+
+@keyframes floatGlow{
+
+    50%{
+
+        transform:
+
+        translateY(30px)
+
+        translateX(-20px);
+
+    }
+
+}
+
+@keyframes floatGlowReverse{
+
+    50%{
+
+        transform:
+
+        translateY(-25px)
+
+        translateX(15px);
+
+    }
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:900px){
+
+    .hero-skeleton{
+
+        height:400px;
+
+    }
+
+    .sk-weather-icon{
+
+        width:85px;
+        height:85px;
+
+    }
+
+    .sk-temp{
+
+        width:180px;
+        height:50px;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .hero-skeleton{
+
+        height:340px;
+
+    }
+
+    .hero-skeleton .weather{
+
+        padding:25px;
+
+    }
+
+    .hero-skeleton .weather-box{
+
+        left:25px;
+
+        bottom:18%;
+
+    }
+
+    .sk-weather-icon{
+
+        width:70px;
+        height:70px;
+
+    }
+
+    .sk-temp{
+
+        width:150px;
+        height:40px;
+
+    }
+
+    .sk-location{
+
+        width:140px;
+
+    }
+
+    .sk-pill{
+
+        width:90px;
+
+    }
+
+}
+
+@media(max-width:430px){
+
+    .hero-skeleton{
+
+        height:300px;
+
+    }
+
+    .sk-weather-icon{
+
+        width:60px;
+        height:60px;
+
+    }
+
+    .sk-temp{
+
+        width:120px;
+        height:35px;
+
+    }
+
+    .sk-location{
+
+        width:120px;
+
+    }
+
+    .sk-pill{
+
+        width:70px;
+        height:15px;
+
+    }
+
+}

@@ -1,0 +1,29 @@
+import { SiAccuweather } from "react-icons/si"
+import "./Navbar.css"
+import useWeather from "../../hook/useWeather"
+function Navbar() {
+    const { country, city, handleCountryChange, handleCityChange, handleSubmit } = useWeather()
+  return (
+    <>
+        <header>
+            <nav>
+                <div className="logo">
+                    <SiAccuweather />
+                    <h2>CloudSync</h2>
+                </div>
+                <form onSubmit={handleSubmit}>
+                    <div className="box">
+                        <input type="text" value={country} onChange={handleCountryChange} placeholder="Country" />
+                    </div>
+                    <div className="box">
+                        <input type="text" value={city} onChange={handleCityChange} placeholder="City" />
+                    </div>
+                    <button type="submit">Search</button>
+                </form>
+            </nav>
+        </header>
+    </>
+  )
+}
+
+export default Navbar

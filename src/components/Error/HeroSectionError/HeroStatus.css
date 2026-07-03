@@ -1,0 +1,372 @@
+/* ===========================
+   HERO STATUS
+=========================== */
+
+.hero-status{
+
+    width:100%;
+    height:450px;
+
+    border-radius:16px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    position:relative;
+
+    background:
+
+    linear-gradient(
+
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.45)
+
+    );
+
+    /* url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80"); */
+
+    background-size:cover;
+    background-position:center;
+
+}
+
+/* ===========================
+   Floating Glow
+=========================== */
+
+.hero-status::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+    height:320px;
+
+    border-radius:50%;
+
+    top:-120px;
+    right:-120px;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        rgba(56,189,248,.18),
+
+        transparent
+
+    );
+
+    animation:floatGlow 8s infinite ease-in-out;
+
+}
+
+.hero-status::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+    height:260px;
+
+    border-radius:50%;
+
+    bottom:-90px;
+    left:-90px;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        rgba(34,211,238,.15),
+
+        transparent
+
+    );
+
+    animation:floatGlowReverse 9s infinite ease-in-out;
+
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.status-card{
+
+    width:min(520px,90%);
+
+    padding:40px;
+
+    text-align:center;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.06);
+
+    backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+
+        0 15px 40px rgba(0,0,0,.25);
+
+    animation:fade .45s ease;
+
+}
+
+/* ===========================
+   ICON
+=========================== */
+
+.status-icon{
+
+    width:100px;
+    height:100px;
+
+    margin:auto;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    margin-bottom:25px;
+
+    animation:pulse 2.5s infinite;
+
+}
+
+.status-icon svg{
+
+    width:48px;
+    height:48px;
+
+}
+
+.status-icon.error{
+
+    color:#F87171;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(239,68,68,.20),
+
+        rgba(255,255,255,.05)
+
+    );
+
+    border:1px solid rgba(248,113,113,.25);
+
+}
+
+.status-icon.empty{
+
+    color:#38BDF8;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(56,189,248,.18),
+
+        rgba(255,255,255,.05)
+
+    );
+
+    border:1px solid rgba(56,189,248,.25);
+
+}
+
+/* ===========================
+   TEXT
+=========================== */
+
+.status-card h2{
+
+    font-size:2rem;
+
+    color:var(--text-primary);
+
+    margin-bottom:15px;
+
+}
+
+.status-card p{
+
+    color:var(--text-secondary);
+
+    line-height:1.8;
+
+    font-size:1rem;
+
+}
+
+.status-tip{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:10px 20px;
+
+    border-radius:30px;
+
+    color:#7DD3FC;
+
+    background:rgba(56,189,248,.08);
+
+    border:1px solid rgba(56,189,248,.15);
+
+}
+
+/* ===========================
+   Animations
+=========================== */
+
+@keyframes pulse{
+
+    50%{
+
+        transform:scale(1.06);
+
+        box-shadow:
+
+        0 0 35px rgba(56,189,248,.25);
+
+    }
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+@keyframes floatGlow{
+
+    50%{
+
+        transform:
+
+        translateY(20px)
+
+        translateX(-20px);
+
+    }
+
+}
+
+@keyframes floatGlowReverse{
+
+    50%{
+
+        transform:
+
+        translateY(-15px)
+
+        translateX(20px);
+
+    }
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+    .hero-status{
+
+        height:380px;
+
+    }
+
+    .status-card{
+
+        padding:30px;
+
+    }
+
+    .status-card h2{
+
+        font-size:1.6rem;
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    .hero-status{
+
+        height:320px;
+
+    }
+
+    .status-card{
+
+        padding:24px;
+
+    }
+
+    .status-icon{
+
+        width:75px;
+        height:75px;
+
+    }
+
+    .status-icon svg{
+
+        width:36px;
+        height:36px;
+
+    }
+
+    .status-card h2{
+
+        font-size:1.3rem;
+
+    }
+
+    .status-card p{
+
+        font-size:.95rem;
+
+    }
+
+}
