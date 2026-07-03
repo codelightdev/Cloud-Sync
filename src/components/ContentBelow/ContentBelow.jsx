@@ -1,7 +1,7 @@
 import { Building2, Droplet, Earth, Globe, MapPin, Sunrise, Sunset, Wind } from 'lucide-react'
 import './ContentBelow.css'
 import useWeather from '../../hook/useWeather'
-import ContentBelowSkeleton from '../Skeleton/ContentBelowSkeleton/ContentBelowSkeleton'
+import ContentBelowSkeleton from '../Preloader/Skeleton/ContentBelowSkeleton/ContentBelowSkeleton'
 import ContentBelowError from '../Error/ContentBelowError/ContentBelowError'
 import ContentBelowEmpty from '../Error/ContentBelowError/ContentBelowEmpty'
 

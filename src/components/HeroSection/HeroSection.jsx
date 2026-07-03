@@ -1,6 +1,6 @@
 import './HeroSection.css'
 import useWeather from '../../hook/useWeather'
-import HeroSkeleton from '../Skeleton/HeroSectionSkeleton/HeroSectionSekeleton'
+import HeroSkeleton from '../Preloader/Skeleton/HeroSectionSkeleton/HeroSectionSekeleton'
 import HeroError from '../Error/HeroSectionError/HeroError'
 import HeroEmpty from '../Error/HeroSectionError/HeroEmpty'
 import { getWeatherIcon } from '../../utils/weatherIcon'

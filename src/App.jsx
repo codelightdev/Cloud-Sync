@@ -2,6 +2,8 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import Home from "./pages/Home/Home"
 import RootLayout from "./layout/RootLayout/RootLayout"
 import WeatherContextProvider from "./context/WeatherContext/WeatherContextProvider"
+import { useEffect, useState } from "react"
+import AppLoader from "./components/Preloader/AppLoader/AppLoader"
 
 function App() {
   const router = createBrowserRouter(
@@ -11,8 +13,38 @@ function App() {
       </Route>
     )
   )
+
+  const [appLoading, setAppLoading] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
+
+  useEffect(() => {
+      const handleLoad = () => {
+          // Start fade out
+          setFadeOut(true);
+
+          // Remove loader after animation
+          setTimeout(() => {
+              setAppLoading(false);
+          }, 500);
+      };
+
+      if (document.readyState === "complete") {
+          handleLoad();
+      } else {
+          window.addEventListener("load", handleLoad);
+
+          return () => {
+              window.removeEventListener("load", handleLoad);
+          };
+      }
+  }, []);
+
   return (
+    
     <>
+      {appLoading && (
+          <AppLoader fadeOut={fadeOut} />
+      )}
       <WeatherContextProvider>
         <RouterProvider router={router} />
       </WeatherContextProvider>
