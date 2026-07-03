@@ -24,7 +24,7 @@
 
 ### Production
 
-🌐 https://cloudsync.vercel.app
+🌐 https://cloudsynclive.vercel.app
 
 or
 
