@@ -1,4 +1,5 @@
-import { SiAccuweather } from "react-icons/si"
+// import { SiAccuweather } from "react-icons/si"
+import { LuCloudSun } from "react-icons/lu";
 import "./Navbar.css"
 import useWeather from "../../hook/useWeather"
 function Navbar() {
@@ -8,7 +9,8 @@ function Navbar() {
         <header>
             <nav>
                 <div className="logo">
-                    <SiAccuweather />
+                    {/* <SiAccuweather /> */}
+                    <LuCloudSun />
                     <h2>CloudSync</h2>
                 </div>
                 <form onSubmit={handleSubmit}>

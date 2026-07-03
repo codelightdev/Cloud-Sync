@@ -26,13 +26,15 @@ header nav .logo {
     gap: 10px;
 }
 header nav .logo svg {
-    font-size: 20px;
-    color: var(--sunny);
+    font-size: 35px;
+    /* color: var(--sunny); */
+    color: #38BDF8;
 }
 header nav .logo h2 {
     font-size: 24px;
     color: var(--text-primary);
     line-height: 1;
+    margin-top: 7px;
 }
 header nav form {
     width: 600px;
