@@ -107,6 +107,10 @@ function WeatherContextProvider(props) {
 
     setHasSearched(true)
     fetchWeatherData();
+
+    setCity('')
+    setCountry('')
+
   }
 
   const weather = weatherData && weatherData.main && weatherData.sys
